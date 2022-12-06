@@ -9,12 +9,12 @@ TL;DR:  The Dell XPS 15 9520 (2022) seems to run well with Fedora 37.
 
 ## Details
 ### Hardware and OS
-Hardware Model: Dell Inc. XPS 15 9520
-Memory: 32.0 GiB
-Processor: 12th Gen Intel® Core™ i9-12900HK × 20
-Graphics: NVIDIA GeForce RTX™ 3050 Ti Laptop GPU / Mesa Intel® Graphics (ADL GT2)
-
-OS Name: Fedora Linux 37 (Workstation Edition)
+Hardware Model: Dell Inc. XPS 15 9520  
+Memory: 32.0 GiB  
+Processor: 12th Gen Intel® Core™ i9-12900HK × 20  
+Graphics: NVIDIA GeForce RTX™ 3050 Ti Laptop GPU / Mesa Intel® Graphics (ADL GT2)  
+  
+OS Name: Fedora Linux 37 (Workstation Edition)  
 
 ## Software Config
 ### Video Drivers
