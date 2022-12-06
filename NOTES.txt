@@ -1,0 +1,12 @@
+
+
+## Boot Issue
+```
+Error: ../../grub-core/fs/fshelp.c:257:file `/boot/grub/grubenv not found"
+```
+
+After much looking around I was not able to determine how/why grub2 seemed to not be pointing to the correct location (/boot/grub2 - or something).
+
+```
+dnf -y reinstall grub2-common
+```
