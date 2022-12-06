@@ -14,9 +14,19 @@ dnf -y reinstall grub2-common
 ## Spotify Client resolution is no bueno
 Issue:  HiDPI resolution and the Linux Spotify Client do not play well together.  The "fix" is simple enough though.
 
+Now, the spotify client is an interesting situation.  It seems you pull the bits down and build it yourself.  Whatever, I suppose.  
+
 Curious whether I should just make a shell alias for this.
 ```
-sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g' /usr/share/spotify-client/spotify.desktop
+sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g' /usr/share/applications/spotify.desktop
+```
+
+Who knows which one the desktop actually uses... I tried them all until it worked (with the above file)
+```
+# find / -name spotify.desktop
+/usr/lib64/spotify-client/spotify.desktop
+/usr/share/applications/spotify.desktop
+/usr/share/spotify-client/spotify.desktop
 ```
 
 ## PowerTop 
