@@ -18,21 +18,18 @@ Now, the spotify client is an interesting situation.  It seems you pull the bits
 
 Curious whether I should just make a shell alias for this.
 ```
-sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g' /usr/share/applications/spotify.desktop
-```
+sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g'  /usr/share/spotify-client/spotify.desktop
 
-Who knows which one the desktop actually uses... I tried them all until it worked (with the above file)
-```
-# find / -name spotify.desktop
-/usr/lib64/spotify-client/spotify.desktop
-/usr/share/applications/spotify.desktop
-/usr/share/spotify-client/spotify.desktop
+# /usr/lib64/spotify-client/spotify.desktop
+# /usr/share/applications/spotify.desktop
+# /usr/share/spotify-client/spotify.desktop
 ```
 
 ## PowerTop 
 Note: this will require some "playing" to get it right.  But, this is a good start.
 
 ```
+sudo su -
 dnf -y install powertop tlp tuned-utils thermald 
 systemctl enable powertop --now
 powertop --auto-tune
