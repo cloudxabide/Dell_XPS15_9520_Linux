@@ -18,11 +18,12 @@ Now, the spotify client is an interesting situation.  It seems you pull the bits
 
 Curious whether I should just make a shell alias for this.
 ```
-sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g'  /usr/share/spotify-client/spotify.desktop
+sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g'  /usr/share/applications/spotify.desktop
 
-# /usr/lib64/spotify-client/spotify.desktop
-# /usr/share/applications/spotify.desktop
-# /usr/share/spotify-client/spotify.desktop
+sudo find / -name "spotify.desktop" 
+/usr/lib64/spotify-client/spotify.desktop
+/usr/share/applications/spotify.desktop
+/usr/share/spotify-client/spotify.desktop
 ```
 
 ## PowerTop 
