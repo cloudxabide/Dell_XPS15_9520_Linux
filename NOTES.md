@@ -16,7 +16,7 @@ Issue:  HiDPI resolution and the Linux Spotify Client do not play well together.
 
 Now, the spotify client is an interesting situation.  It seems you pull the bits down and build it yourself.  Whatever, I suppose.  
 
-Curious whether I should just make a shell alias for this.
+Curious whether I should just make a shell alias for "spotify" rather than modifying files that might get updated/ovewritten later.  meh.
 ```
 sudo sed -i -e 's/Exec=spotify/Exec=spotify --force-device-scale-factor=1.8/g'  /usr/share/applications/spotify.desktop
 
@@ -51,6 +51,16 @@ echo "CPU_SCALING_MAX_FREQ_ON_AC=2450000
 ```
 which is 1/2 of the "default" value?  4900000  
 https://github.com/sharipov-ru/dell-xps-9560/blob/master/config/tlp
+
+## Updating Intel config (i915)
+I have (now) 2 laptops, each with some bizarre desktop hang issue.  Some aggravating research led me to updating the enable_psr variable.  Seems to have improved my situation.
+
+```
+cat << EOF | sudo tee /etc/modprobe.d/i915.conf 
+# https://wiki.archlinux.org/title/intel_graphics
+options i915 enable_psr=0
+EOF
+```
 
 ## Display Manager
 Some folks mentioned falling back to X11.  I tried that, as I enjoyed X11 for decades - but... there were quirky/odd issues and I decided taking my chances with Wayland was the better option.  Wayland seems to have some quirkly issues:  like.. the desktop will hang for a bit intermittently - but, also seems to recover.  :shrug:
