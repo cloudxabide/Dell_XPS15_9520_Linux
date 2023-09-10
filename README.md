@@ -19,9 +19,11 @@ Hardware Model: Dell Inc. XPS 15 9520
 Memory: 32.0 GiB  
 Processor: 12th Gen Intel® Core™ i9-12900HK × 20  
 Graphics: NVIDIA GeForce RTX™ 3050 Ti Laptop GPU / Mesa Intel® Graphics (ADL GT2)  
-  
+
+OS Name: "Ubuntu" (Ubuntu 22.04.3 LTS)    
 OS Name: Fedora Linux 37 (Workstation Edition)  
 
 ## Software Config
 ### Video Drivers
-I used akmod-nvidia from RPMfusion
+Fedora: I used akmod-nvidia from RPMfusion  
+Ubuntu: Used the Software & Updates tool, then enabled the 535 driver (not the open one)
